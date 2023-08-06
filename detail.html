@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" integrity="sha512-CryKbMe7sjSCDPl18jtJI5DR5jtkUWxPXWaLCst6QjH8wxDexfRJic2WRmRXmstr2Y8SxDDWuBO6CQC6IE4KTA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>OLX</title>
+  </head>
+  <body>
+<div class="containe-fluid bg-light" style="position:fixed;width:100%;z-index:9999;top: 0;">
+
+<div class="col-md-12">
+    <div class="container">
+<div class="row">
+    <nav class="nav align-items-center ">
+        <a class="nav-link active" aria-current="page" href="#"><img src="img/download-removebg-preview.png" width="40px"  alt=""></a>
+        <a class="car ms-4" href="#"><i class="fa-solid cr1 fa-car p-2 me-2"></i>Motors</a>
+        <a class="Property ms-3" href="#"><i class="fa-sharp pr1 fa-solid fa-arrow-right-to-city p-2 me-2"></i>Property</a>
+    </nav>
+</div>
+
+</div>
+</div>
+
+
+
+
+<div class="col-md-12">
+    <div class="container-fluid">
+<div class="row">
+    <nav class="nav align-items-center   ">
+        <a class="nav-link active ms-4" aria-current="page" href="#"><img src="img/OLX-Logo-PNG-768x768-removebg-preview.png" width="90px"  alt=""></a>
+        <a class="nav-link active mt-3" aria-current="page" href="#"><select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <option  selected>&#128269; Pakistan</option>
+            <option value="1">&#9967; Choose Your Current Location </option>
+            <hr>
+            <option value="2">&#9967; Karachi</option>
+            <option value="3">&#9967; Lahore</option>
+        </select></a>
+        <a class="nav-link active" aria-current="page" href="#"><input id="ser"  type="search"><button id="btn1" ><i class="fa-solid fa-magnifying-glass"></i></button> </a>
+        <button class="login ms-3" onclick="showlogin()" id="log" >Login</button>
+        <img src="img/ai.jpg" id="user" style="display: none;height:50px;width:50px;border-radius:50%;" alt="" srcset="">
+        <button class="login ms-3" style="display: none;border: none;background: transparent;" onclick="logout()"  id="logout" >Log Out</button>
+        <button style="border: none;background: transparent;" class=" ms-3" onclick="sel()"><img  src="	https://www.olx.com.pk/assets/iconSellBorder_noinline.d9eebe038fbfae9f90fd61d971037e02.svg" alt="" srcset=""><span class="sel">+ Sell</span> </button>
+        
+    </nav>
+</div>
+
+</div>
+</div>
+</div>
+<!-- navbar -->
+<br><br><br><br><br><br><br>
+<div class="container-fluid">
+    <div class="row shadow-sm p-3 mb-5 bg-body rounded">
+        <div class="col-md-12">
+            <ul class="nav  ms-5 " style="color:#002f34 ;">     
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle same" style="color:#002f34;"  data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">All Categories</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link same" style="color:#002f34;"  href="#">Mobile Phones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link same" style="color:#002f34;"  href="#">Cars</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link same" style="color:#002f34;"  href="#">Motorcycles</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link same" style="color:#002f34;"  href="#">Houses</a>
+        </li>      
+        <li class="nav-item">
+            <a class="nav-link same" style="color:#002f34;"  href="#">TV - Video - Audio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link same" style="color:#002f34;"  href="#">Tablets
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link same" style="color:#002f34;"  href="#">Land & Plots</a>
+        </li>
+        
+    </ul>
+</div>
+</div>
+</div>
+<!--End navbar -->
+
+
+<div class="container gx-5 ">
+<div class="row">
+<div class="col-md-6 shadow-sm p-3 mb-5 bg-white rounded border" >
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" id="inner">
+          <div class="carousel-item active">
+            <img src="" id="img1" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src=""  class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src=""  class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</div>
+<div class="col-md-5">
+<div class="row ms-2 ">
+  <div class="col-md-12 shadow-sm p-3 mb-5 bg-white rounded border d-flex " id="user_data">
+<img src="img/iconProfilePicture.7975761176487dc62e25536d9a36a61d.png" height="100px" alt="" srcset="">
+
+  </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+<div class="container gx-5">
+  <div class="row">
+  <div class="col-md-7 shadow-sm p-3 mb-5 bg-white rounded border" >
+<div class="card2" style="display: flex;justify-content: space-between;">
+
+  <div class="detail">
+    <h2 id="price"></h2>
+    <p id="brand"></p>
+  </div>
+  <div class="share">
+    <i class="fa-solid fa-share-nodes me-2"></i>
+    <i class="fa-regular fa-heart"></i>
+  </div>
+  
+</div>
+
+
+
+  </div>
+</div>
+</div>
+
+<br><br>
+<footer>
+<div class="container-fluid bg-light ">
+<div class="row">
+<div class="col-md-12 ">
+<div class="container ms-3 d-flex flex-wrap">
+<br>
+
+<ul class="nav d-block me-5">
+  <br>
+    <h6 class="ms-3" style="color:#002f34;font-size: 15px;">POPULAR CATEGORIES</h6>
+
+        <li class="nav-item"><a style="color:#2f6a70;"   class="nav-link" href="">Cars</a></li>
+<li class="nav-item"><a style="color:#2f6a70;" class="nav-link" href="">Flats for rent</a></li>
+<li class="nav-item"><a style="color:#2f6a70;" class="nav-link" href="">Mobile Phones</a></li>
+<li class="nav-item"><a style="color:#2f6a70;" class="nav-link" href="">Jobs</a></li>
+
+    </ul>
+    
+    <br>
+    
+    <ul class="nav d-block me-5">
+        <br>
+        <h6 class="ms-3" style="color:#002f34;font-size: 15px;">TRENDING SEARCHES</h6>
+<li class="nav-item"><a style="color:#2f6a70;"   class="nav-link" href="">Bikes</a></li>
+<li class="nav-item"><a style="color:#2f6a70;" class="nav-link" href="">Watches</a></li>
+<li class="nav-item"><a style="color:#2f6a70;" class="nav-link" href="">Books</a></li>
+<li class="nav-item"><a style="color:#2f6a70;" class="nav-link" href="">Dogs</a></li>
+
+    </ul>
+    <ul class="nav d-block me-5">
+        <br>
+        <h6 class="ms-3" style="color:#002f34;font-size: 15px;">About Us</h6>
+<li class="nav-item"><a style="color:#2f6a70;"   class="nav-link" href="">About Dubizzle Group</a></li>
+<li class="nav-item"><a style="color:#2f6a70;" class="nav-link" href="">OLX Blog</a></li>
+<li class="nav-item"><a style="color:#2f6a70;" class="nav-link" href="">Contact Us</a></li>
+<li class="nav-item"><a style="color:#2f6a70;" class="nav-link" href="">OLX for Businesses</a></li>
+    </ul>
+    
+    <ul class="nav d-block me-5">
+        <br>
+        <h6 class="ms-3" style="color:#002f34;font-size: 15px;">OLX</h6>
+<li class="nav-item"><a style="color:#2f6a70;"   class="nav-link" href="">Help</a></li>
+<li class="nav-item"><a style="color:#2f6a70;" class="nav-link" href="">Sitemap</a></li>
+<li class="nav-item"><a style="color:#2f6a70;" class="nav-link" href="">Terms of use</a></li>
+<li class="nav-item"><a style="color:#2f6a70;" class="nav-link" href="">Privacy Policy</a></li>
+    </ul>
+    
+    <ul class="nav d-block ">
+        <br>
+        <h6 class="ms-3" style="color:#002f34;">Follow Us</h6>
+        <div class="" style="margin-top: 20px;margin-left: 10px;">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter ms-3"></i>
+            <i class="fa-brands fa-google-play ms-3"></i>
+            <i class="fa-brands fa-instagram ms-3"></i>
+        </div>
+        <br><br>
+        <div class="d-flex col-sm-4 me-2" style="margin-top: -10px;">
+            <img width="210px" src="img/iconAppStoreEN_noinline.a731d99c8218d6faa0e83a6d038d08e8.svg" alt="">
+            <img  class="ms-2" src="img/iconGooglePlayEN_noinline.9892833785b26dd5896b7c70b089f684.svg" alt="">
+            <img class="ms-2" src="img/iconAppGallery_noinline.6092a9d739c77147c884f1f7ab3f1771.svg" alt="">
+        </div>
+</ul> 
+</div>
+</div>
+</div>
+</div>
+<div class="container-fluid" style="background-color: 
+#002f34;height: 40px;">
+<div class="row ">
+<div class="col-md-12 align-items-center ">
+ <h6 class="text-white text-end m-2" >Free Classifieds in Pakistan . © 2006-2023 OLX</h6>
+
+</div>
+
+
+</div>
+
+
+</div>
+</footer>
+
+
+
+<div class="login_div" id="login_div">
+<div id="signin">
+  <br>
+  <div class="icon" style="display:flex;justify-content:space-between;">
+    <div class="back ms-4"><i class="fa-solid fa-arrow-left-long"></i> </div>
+    <div class="close me-4"><button onclick="cls()" style="border: none;background-color: transparent;cursor: pointer;"><i class="fa-solid fa-xmark"></i></button></div>
+  </div>
+
+    <div class="content1">
+  <img src="img/logo_noinline.1cdf230e49c0530ad4b8d43e37ecc4a4.svg" width="80px" alt="">
+  <h4>Enter Your Email</h4>
+</div>
+<div class="inputs">
+  <input type="email" id="email">
+<button onclick="login()">Login</button>
+</div>
+<button class="ms-3" style="color: #002f34; background-color: transparent;border: none;text-decoration: underline;" onclick="reg()">Register</button>
+<br><br>
+<p class="text-center text-muted" style="font-size: 12px;">We won't reveal your email to anyone else nor use it to send you spam.</p>
+<br><br>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="signup_div" id="signup_div">
+  <div id="signup">
+    <br>
+    <div class="icon" style="display:flex;justify-content:space-between;">
+      <div class="back ms-4"><i class="fa-solid fa-arrow-left-long"></i> </div>
+      <div class="close me-4"><button onclick="regcls()" style="border: none;background-color: transparent;cursor: pointer;"><i class="fa-solid fa-xmark"></i></button></div>
+    </div>
+  
+      <div class="content2">
+    <img src="img/logo_noinline.1cdf230e49c0530ad4b8d43e37ecc4a4.svg" width="80px" alt="">
+    <h4>Register Your Account Here</h4>
+  </div>
+  <div class="inputs1">
+    <input type="text" id="name" placeholder="Name">
+    <input type="email" id="email1" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+  <button  onclick="signup()">Register</button>
+  </div>
+  
+  <br><br>
+  <p class="text-center text-muted" style="font-size: 12px;">We won't reveal your email to anyone else nor use it to send you spam.</p>
+  <br><br>
+  
+  
+  </div>
+  
+  </div>
+  
+  </div>
+  
+    <script>
+    
+    function detpro() {
+      var get=localStorage.getItem("detail");
+      var users=JSON.parse(localStorage.getItem("users"));
+      var json=JSON.parse(get);
+      console.log(json.img);
+     var img=`<div class="carousel-item active">
+     <img src="${json.img}" id="img1" class="d-block " width="100%" height="400px" alt="...">
+    </div>
+    <div class="carousel-item">
+     <img height="400px" src="${json.img}"  class="d-block " alt="..." width="100%">
+    </div>
+    <div class="carousel-item">
+     <img width="100%" height="400px" src="${json.img}"  class="d-block " alt="...">
+    </div>`;
+    document.getElementById("price").innerHTML="PKR " + json.cost
+    document.getElementById("brand").innerHTML= json.brand
+    document.getElementById("inner").innerHTML=img;
+    var user_Data=`<div class="user_content ms-2">
+      <h5 id="name">${JSON.parse(localStorage.getItem("detail_name"))}</h5>
+<p>Member Since ${JSON.parse(localStorage.getItem("create"))}</p>
+<a href="">See Profile</a>
+</div>`;
+document.getElementById("user_data").innerHTML+=user_Data;
+
+
+
+    }
+    detpro();
+    
+    </script>
+  
+  
+  
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <script src="app.js"></script>
+  </body>
+</html>
